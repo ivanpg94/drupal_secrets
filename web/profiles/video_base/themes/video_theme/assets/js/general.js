@@ -17,16 +17,4 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
-document.addEventListener("DOMContentLoaded", function () {
-  const element = document.querySelector("#block-portfolio-theme-views-block-header-block-1 .field-content");
-  if (element) {
-    const text = element.textContent.trim();
-    const words = text.split(" ");
-    const middleIndex = Math.ceil(words.length / 2);
 
-    const firstHalf = words.slice(0, middleIndex).join(" ");
-    const secondHalf = words.slice(middleIndex).join(" ");
-
-    element.innerHTML = `<span class="first-half">${firstHalf}</span> <span class="second-half">${secondHalf}</span>`;
-  }
-});

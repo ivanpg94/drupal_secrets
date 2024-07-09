@@ -12,7 +12,7 @@ a{
 .path-frontpage,
 .path-videos{
   main{
-    max-width: 1440px;
+    max-width: 90%;
     margin: 0 auto;
   }
 }
