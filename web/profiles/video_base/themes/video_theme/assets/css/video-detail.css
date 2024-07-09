@@ -1,19 +1,19 @@
 @import "variables.pcss.css";
 
-.path-node #block-video-theme-addtoanysharebuttons--2{
+.path-node #block-video-theme-addtoanysharebuttons--2 {
     display: none;
   }
 
-.path-node #block-video-theme-addtoanysharebuttons{
+.path-node #block-video-theme-addtoanysharebuttons {
     display: none;
   }
 
-.path-node .video-container video{
+.path-node .video-container video {
       width: 100%;
       height: 100%;
     }
 
-.path-node .title{
+.path-node .title {
     max-width: 90%;
     margin: 0 auto;
     font-family: var(--font-family);
@@ -25,7 +25,7 @@
     padding: 1rem;
   }
 
-.path-node .video-detail-container{
+.path-node .video-detail-container {
     max-width: 90%;
     margin: 0 auto;
     background-color: var(--color-terciary);
@@ -41,10 +41,24 @@
       justify-content: space-between;
     }
 
+@media (max-width: 1000px) {
+
+.path-node .video-detail-container .category-social-container {
+        flex-direction: column
+    }
+      }
+
 .path-node .video-detail-container .category-social-container .category-container {
         display: flex;
         justify-content: left;
       }
+
+@media (max-width: 1000px) {
+
+.path-node .video-detail-container .category-social-container .category-container {
+          flex-direction: column
+      }
+        }
 
 .path-node .video-detail-container .category-social-container .category-container h2 {
           display: flex;
@@ -58,12 +72,19 @@
           color: var(--color-black);
         }
 
-.path-node .video-detail-container .category-social-container .category-container div{
+@media (max-width: 1000px) {
+
+.path-node .video-detail-container .category-social-container .category-container h2 {
+            margin-bottom: 1rem
+        }
+          }
+
+.path-node .video-detail-container .category-social-container .category-container div {
           display: flex;
           align-items: center;
         }
 
-.path-node .video-detail-container .category-social-container .category-container div a{
+.path-node .video-detail-container .category-social-container .category-container div a {
             color: var(--color-principal);
             font-family: var(--font-family);
             font-weight: 400;
@@ -71,12 +92,23 @@
             line-height: 19px;
             border: 1px solid var(--color-principal);
             border-radius: 100px;
-            padding: 0.5rem 1rem;          }
+            padding: 0.5rem 1rem;
+          }
 
 .path-node .video-detail-container .category-social-container .social-share-container {
         display: flex;
         justify-content: right;
       }
+
+@media (max-width: 1000px) {
+
+.path-node .video-detail-container .category-social-container .social-share-container {
+          margin-top: 1rem;
+          margin-top: 1rem;
+          justify-content: left;
+          flex-direction: column
+      }
+        }
 
 .path-node .video-detail-container .category-social-container .social-share-container h2 {
           display: flex;
@@ -90,12 +122,19 @@
           color: var(--color-black);
         }
 
-.path-node .video-detail-container .category-social-container .social-share-container #block-video-theme-addtoanysharebuttons{
+@media (max-width: 1000px) {
+
+.path-node .video-detail-container .category-social-container .social-share-container h2 {
+            margin-bottom: 1rem
+        }
+          }
+
+.path-node .video-detail-container .category-social-container .social-share-container #block-video-theme-addtoanysharebuttons {
           display: flex;
           align-items: center;
         }
 
-.path-node .video-detail-container .description-container h2{
+.path-node .video-detail-container .description-container h2 {
         font-family: var(--font-family);
         font-weight: 700;
         font-size: 16px;
@@ -103,10 +142,11 @@
         color: var(--color-black);
       }
 
-.path-node .video-detail-container .description-container div p{
+.path-node .video-detail-container .description-container div p {
           font-family: var(--font-family);
           font-weight: 400;
           font-size: 16px;
           line-height: 19px;
           color: var(--color-black);
+          text-align: justify;
         }
