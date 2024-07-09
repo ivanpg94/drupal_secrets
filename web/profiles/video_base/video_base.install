@@ -1,0 +1,129 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the video_base profile.
+ */
+
+use Drupal\user\Entity\User;
+
+/**
+ * Implements hook_install().
+ *
+ * Perform actions to set up the site for this profile.
+ *
+ * @see system_install()
+ */
+function video_base_install() {
+  // Set front page to "node" by default.
+  \Drupal::configFactory()->getEditable('system.site')->set('page.front', '/node')->save(TRUE);
+
+  // Enable the admin theme (Claro).
+  //\Drupal::configFactory()->getEditable('system.theme')->set('admin', 'portfolio_theme')->save(TRUE);
+
+  // Enable the frontend theme (portfolio_theme).
+  //\Drupal::configFactory()->getEditable('system.theme')->set('default', 'portfolio_theme')->save(TRUE);
+
+  // Disable agregation
+  shell_exec('drush config-set system.performance js.preprocess 0');
+  shell_exec('drush config-set system.performance css.preprocess 0');
+
+}
+
+/**
+ * Implements hook_install_task().
+ *
+ * Add more task tabs to the installation process
+ *
+ */
+function video_base_install_tasks(&$install_state): array {
+  $tasks = [];
+
+  // Module form task
+//  $tasks['video_base_configure_form'] = [
+//    'display_name' => t('Select extra modules'),
+//    'type' => 'form',
+//    'function' => 'Drupal\video_base\Installer\Form\VideoBaseChooseModuleForm',
+//  ];
+
+  // Theme form task
+  $tasks['video_base_choose_theme_form'] = [
+    'display_name' => t('Select the theme'),
+    'type' => 'form',
+    'function' => 'Drupal\video_base\Installer\Form\VideoBaseChooseThemeForm',
+  ];
+
+  // Import config task
+  $tasks['video_base_import_configuration'] = [
+    'display_name' => t('Import Configuration'),
+    'type' => 'function',
+    'function' => 'video_base_import_configuration',
+  ];
+
+  return $tasks;
+
+}
+
+/**
+ * Import config function
+ */
+function video_base_import_configuration(&$install_state) {
+  // Path to config folder
+  $config_folder = '/profiles/video_base/config/install';
+
+
+  // Import configuration from the specified folder.
+  shell_exec("drush cim -y --source=$config_folder");
+  shell_exec("drush cex -y");
+
+  $current_directory = __DIR__;
+
+  $yaml_file = $current_directory . '/../../config/content_as_config.taxonomy_term.yml';
+  $yaml_file2 = $current_directory . '/../../config/content_as_config.menu_link_content.yml';
+
+  // Run sed command to modify YAML file
+  $sed_command = "sed -i -e '/_core:/,+1d' -e '/^langcode: /d' -e '/^uuid: /d' $yaml_file";
+  $sed_command2 = "sed -i -e '/_core:/,+1d' -e '/^langcode: /d' -e '/^uuid: /d' $yaml_file2";
+
+  $sed_result = shell_exec($sed_command);
+  $sed_result2 = shell_exec($sed_command2);
+
+  $sed_result = shell_exec($yaml_file);
+  $sed_result2 = shell_exec($yaml_file2);
+
+  // Check if the sed command executed successfully
+  if ($sed_result === null) {
+    // Log error message
+    $message = "Error modifying YAML file: $yaml_file";
+    \Drupal::logger('installation')->error($message);
+  }
+
+  if ($sed_result2 === null) {
+    // Log error message
+    $message = "Error modifying YAML file: $yaml_file2";
+    \Drupal::logger('installation')->error($message);
+  }
+
+  // Import profile config
+  shell_exec("drush cim -y");
+  // Import taxonomy terms
+  shell_exec("drush content_as_config:import taxonomy_term");
+  // Import menus
+  shell_exec("drush content_as_config:import menu_link_content");
+  // Import blocks
+//  shell_exec("drush content_as_config:import block_content");
+  // Set use admin theme true
+  shell_exec("drush cset node.settings use_admin_theme true -y");
+
+// Create user object.
+  $user = User::create();
+
+//Mandatory settings
+  $user->setUsername("editor");
+  $user->setPassword("editor");
+  $user->enforceIsNew();
+  $user->setEmail("editor@editor.com");
+  $user->addRole('editor');
+  $user->activate();
+  $user->save();
+}

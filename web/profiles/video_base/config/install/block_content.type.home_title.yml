@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: home_title
+label: 'Home title'
+revision: 0
+description: ''

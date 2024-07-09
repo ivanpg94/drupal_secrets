@@ -1,0 +1,5 @@
+services:
+  node_view_counter.event_subscriber:
+    class: Drupal\node_view_counter\EventSubscriber\NodeViewCounterSubscriber
+    tags:
+      - { name: event_subscriber }

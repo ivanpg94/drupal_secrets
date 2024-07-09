@@ -1,0 +1,11 @@
+<?php
+
+
+/**
+ * Implements hook_content_as_config_controllers().
+ */
+function groups_as_config_content_as_config_controllers() {
+  return [
+    'group' => '\Drupal\groups_as_config\Controller\GroupsController',
+  ];
+}

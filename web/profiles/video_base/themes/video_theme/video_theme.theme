@@ -1,0 +1,37 @@
+<?php
+
+use Drupal\Component\Utility\Html;
+
+/**
+ * Preprocess variables for html templates.
+ */
+function video_theme_preprocess_html(&$variables) {
+  // Add path to body
+  $path_class = !$variables['root_path'] ? 'path-frontpage' : 'path-' . Html::getClass($variables['root_path']);
+  if (isset($path_class)) {
+    $variables['attributes']['class'][] = $path_class;
+  }
+}
+/**
+ * Implements hook_preprocess_HOOK() for node templates.
+ */
+function video_theme_preprocess_node(&$variables) {
+  $node = $variables['node'];
+  if ($node->getType() == 'video') {
+    $variables['#attached']['library'][] = 'video_theme/video_redirect';
+
+    // Obtén la lista de IDs de nodos guardada en la sesión.
+    $nids = \Drupal::service('session')->get('search_results_nids', []);
+
+    // Encuentra el índice del nodo actual en la lista de IDs.
+    $current_nid = $node->id();
+    $current_index = array_search($current_nid, $nids);
+
+    // Si se encuentra el nodo actual y no es el último, obtén el siguiente nodo.
+    if ($current_index !== FALSE && isset($nids[$current_index + 1])) {
+      $next_nid = $nids[$current_index + 1];
+      $next_node = \Drupal\node\Entity\Node::load($next_nid);
+      $variables['#attached']['drupalSettings']['videoRedirect']['nextNodeUrl'] = $next_node->toUrl()->toString();
+    }
+  }
+}

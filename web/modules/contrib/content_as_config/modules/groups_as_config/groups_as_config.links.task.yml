@@ -1,0 +1,16 @@
+groups_as_config.groups:
+  route_name: groups_as_config.groups.export
+  title: Groups
+  base_route: content_as_config
+  weight: 45
+
+groups_as_config.groups.export:
+  title: Export
+  route_name: groups_as_config.groups.export
+  parent_id: groups_as_config.groups
+
+groups_as_config.groups.import:
+  title: Import
+  route_name: groups_as_config.groups.import
+  parent_id: groups_as_config.groups
+  weight: 1

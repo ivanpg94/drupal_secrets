@@ -1,0 +1,7 @@
+name: 'Node View Counter'
+type: module
+description: 'Adds a node view counter field to count node views.'
+package: Custom
+core_version_requirement: ^9 || ^10
+dependencies:
+  - drupal:field

@@ -1,0 +1,15 @@
+uuid: 4a26b87a-5acd-4e1b-a8e5-15c4b9a082e7
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 8HtgQ79QV0gSBeWlSwfCr2pmnH10YTBIpuzxR_5x2GI
+id: video
+label: video
+description: ''
+source: video_file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_video_file
+field_map: {  }

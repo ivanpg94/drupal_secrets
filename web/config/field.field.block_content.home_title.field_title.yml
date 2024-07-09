@@ -1,0 +1,21 @@
+uuid: c10c2e7c-518b-4bb6-9935-ea1736b93cf6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.home_title
+    - field.storage.block_content.field_title
+_core:
+  default_config_hash: PEqMwKh5cKESOSLJN1shSJ0Japt6kCr_Ts1MEHNGRXo
+id: block_content.home_title.field_title
+field_name: field_title
+entity_type: block_content
+bundle: home_title
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,31 @@
+uuid: 9d6a3f62-6a32-48a9-ad5f-74e111eb6e58
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.home_title
+    - field.field.block_content.home_title.field_title
+_core:
+  default_config_hash: QnIYXm2GWKquVXsJjR4-JqCuYdGfzLafn2bKAhcd7cQ
+id: block_content.home_title.default
+targetEntityType: block_content
+bundle: home_title
+mode: default
+content:
+  field_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 0
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden:
+  info: true

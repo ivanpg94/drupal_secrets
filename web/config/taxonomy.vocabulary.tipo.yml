@@ -1,0 +1,10 @@
+uuid: 740b121f-a9ca-4563-a61a-600f9d7fd3d6
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: rj61ABBle5C7s0UQm5vGdVRY_pX1H-AhUCFRAa1OW0k
+name: Tipo
+vid: tipo
+description: ''
+weight: 0

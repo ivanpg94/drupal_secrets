@@ -1,0 +1,25 @@
+uuid: f504504c-89f2-403d-a244-67a2a5cffd80
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.home_title
+    - field.field.block_content.home_title.field_title
+_core:
+  default_config_hash: zJAnyLmNuslHrUzrP0PAKP-8ZzBoopY4cMluH2l_eX8
+id: block_content.home_title.default
+targetEntityType: block_content
+bundle: home_title
+mode: default
+content:
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

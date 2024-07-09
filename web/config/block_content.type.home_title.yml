@@ -1,0 +1,10 @@
+uuid: 02f7a482-0fb5-4468-a6b4-5431db35509c
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: eXzGtoMUkaoNf-LUxLO-nIbyblRP8Ij-HqBQviMYNeU
+id: home_title
+label: 'Home title'
+revision: 0
+description: ''

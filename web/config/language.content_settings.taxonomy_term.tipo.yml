@@ -1,0 +1,13 @@
+uuid: 890bcc8c-a017-4da7-8d1e-1b4a8c89c516
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tipo
+_core:
+  default_config_hash: auRsYcHNqJhbUTVjwi17G1gQMvGSjNjwMZYs_7W0OZA
+id: taxonomy_term.tipo
+target_entity_type_id: taxonomy_term
+target_bundle: tipo
+default_langcode: site_default
+language_alterable: false

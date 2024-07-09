@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: video
+label: video
+type: 'canonical_entities:node'
+pattern: 'video/[node:title]'
+selection_criteria:
+  9e3367fd-94ba-487b-b411-4ea28b5316b3:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      video: video
+selection_logic: and
+weight: -5
+relationships: {  }

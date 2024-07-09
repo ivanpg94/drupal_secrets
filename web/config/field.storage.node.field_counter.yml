@@ -1,0 +1,21 @@
+uuid: 0f24ab1a-21f3-47f6-b1d4-b6b8a43e0cf2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - node_view_counter
+_core:
+  default_config_hash: H_Ak_QrbrTF2wUK5iyUTX2zwH2a0M6f7PLn7aWHDtjo
+id: node.field_counter
+field_name: field_counter
+entity_type: node
+type: node_view_counter
+settings: {  }
+module: node_view_counter
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.videos
+  module:
+    - system
+    - views
+  theme:
+    - video_theme
+id: video_theme_exposedformvideospage_1
+theme: video_theme
+region: content
+weight: -1
+provider: null
+plugin: 'views_exposed_filter_block:videos-page_1'
+settings:
+  id: 'views_exposed_filter_block:videos-page_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /videos

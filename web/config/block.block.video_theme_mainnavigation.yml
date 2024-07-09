@@ -1,0 +1,27 @@
+uuid: a868eefd-3757-4644-831a-24cb41f95d46
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - video_theme
+_core:
+  default_config_hash: '-pI6p7TaSCx-VOBn_2_F6aXrMsOUVCZ-62_eqXJbW_Y'
+id: video_theme_mainnavigation
+theme: video_theme
+region: header
+weight: -2
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

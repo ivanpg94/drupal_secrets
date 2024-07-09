@@ -1,0 +1,20 @@
+{
+  "name": "portfolio_theme",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "chokidar": "^3.6.0",
+    "fast-glob": "^3.3.2",
+    "glob": "^10.4.1",
+    "glob-promise": "^6.0.7",
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0",
+    "postcss-nested": "^6.0.1"
+  },
+  "scripts": {
+    "build:css": "node build-css.js",
+    "watch:css": "node build-css.js --watch"
+  }
+}

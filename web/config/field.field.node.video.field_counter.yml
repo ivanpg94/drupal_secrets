@@ -1,0 +1,23 @@
+uuid: 1defbc5a-676f-433b-beaa-38bd4a6f3f23
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_counter
+    - node.type.video
+  module:
+    - node_view_counter
+_core:
+  default_config_hash: Yem7Gcmj8Ot9yWflIUHRKnXhsppRBhU_A5u2o95KAAM
+id: node.video.field_counter
+field_name: field_counter
+entity_type: node
+bundle: video
+label: counter
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: node_view_counter

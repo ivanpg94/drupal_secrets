@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * @file
+ * Module file for content_as_config.
+ */
+
+use Drupal\Component\Utility\Html;
+use Drupal\content_as_config\Controller\BlockContentController;
+use Drupal\content_as_config\Controller\MenuLinksController;
+use Drupal\content_as_config\Controller\TaxonomiesController;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function content_as_config_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.content_as_config':
+      $text = file_get_contents(__DIR__ . '/README.md');
+      if (!\Drupal::moduleHandler()->moduleExists('markdown')) {
+        return '<pre>' . Html::escape($text) . '</pre>';
+      }
+      else {
+        // Use the Markdown filter to render the README.
+        $filter_manager = \Drupal::service('plugin.manager.filter');
+        $settings = \Drupal::configFactory()->get('markdown.settings')->getRawData();
+        $config = ['settings' => $settings];
+        $filter = $filter_manager->createInstance('markdown', $config);
+        return $filter->process($text, 'en');
+      }
+  }
+  return NULL;
+}
+
+/**
+ * Implements hook_content_as_config_controllers().
+ */
+function content_as_config_content_as_config_controllers(): array {
+  return [
+    'block_content' => BlockContentController::class,
+    'menu_link_content' => MenuLinksController::class,
+    'taxonomy_term' => TaxonomiesController::class,
+  ];
+}

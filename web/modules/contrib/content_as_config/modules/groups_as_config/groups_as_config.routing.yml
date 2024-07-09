@@ -1,0 +1,15 @@
+groups_as_config.groups.export:
+  path: '/admin/structure/content-as-config/groups-export'
+  defaults:
+    _form: '\Drupal\groups_as_config\Form\GroupsExportForm'
+    _title: 'Export groups'
+  requirements:
+    _permission: 'administer site configuration'
+
+groups_as_config.groups.import:
+  path: '/admin/structure/content-as-config/groups-import'
+  defaults:
+    _form: '\Drupal\groups_as_config\Form\GroupsImportForm'
+    _title: 'Import groups'
+  requirements:
+    _permission: 'administer site configuration'

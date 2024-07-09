@@ -1,0 +1,41 @@
+variables:
+  css:
+    theme:
+      assets/css/variables.css: {}
+  js:
+    assets/js/general.js: { }
+  dependencies:
+    - core/jquery
+
+general:
+  css:
+    theme:
+      assets/css/general.css: {}
+
+menu:
+  css:
+    theme:
+      assets/css/menu.css: {}
+
+home:
+  css:
+    theme:
+      assets/css/home.css: {}
+
+videos:
+  css:
+    theme:
+      assets/css/videos.css: {}
+
+video-detail:
+  css:
+    theme:
+      assets/css/video-detail.css: {}
+
+video_redirect:
+  version: 1.x
+  js:
+    assets/js/video-redirect.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery

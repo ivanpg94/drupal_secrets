@@ -1,0 +1,43 @@
+@import "variables.pcss.css";
+
+header > div {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-principal);
+
+  #block-video-theme-sitebranding {
+    display: flex;
+    align-items: center;
+
+    img {
+      padding-top: 0.5rem;
+      padding-left: 2rem;
+    }
+  }
+
+  #block-video-theme-mainnavigation {
+    display: flex;
+    align-items: center;
+    padding-right: 2rem;
+
+    ul {
+      li {
+        a {
+          text-transform: uppercase;
+          font-family: var(--font-family);
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 19.5px;
+          color: var(--color-terciary);
+          padding: 8px 16px;
+        }
+        .is-active{
+          border-radius: 8px;
+          background-color: var(--color-secondary);
+          font-weight: 600;
+
+        }
+      }
+    }
+  }
+}

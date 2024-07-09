@@ -1,0 +1,26 @@
+uuid: d2acd2ea-9c8f-44a0-92b8-f316c44c3df2
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - video_theme
+_core:
+  default_config_hash: Z03F84NtRiliFxdinJC6-dxGJcL3edypR0ErGWxyuB0
+id: video_theme_pagetitle_2
+theme: video_theme
+region: content
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

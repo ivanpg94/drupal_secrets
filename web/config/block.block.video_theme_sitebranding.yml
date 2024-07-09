@@ -1,0 +1,25 @@
+uuid: b6a1bffa-23c2-4227-8c8b-4d441c78e20f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - video_theme
+_core:
+  default_config_hash: Tr8i1IRI9XMjBOi_lW69qFA0ruBKymPR91kvJAFaf7A
+id: video_theme_sitebranding
+theme: video_theme
+region: header
+weight: -3
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

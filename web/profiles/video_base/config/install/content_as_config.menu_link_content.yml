@@ -1,0 +1,26 @@
+ef90f500-831e-4cae-a00e-7b59d22be3a4:
+  uuid: ef90f500-831e-4cae-a00e-7b59d22be3a4
+  menu_name: main
+  title: Videos
+  parent: ''
+  link:
+    -
+      uri: 'internal:/videos'
+      title: ''
+      options: {  }
+  description: ''
+  enabled: '1'
+  expanded: '0'
+  weight: '0'
+  langcode: en
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: 'Export menu links | Drupal secrets'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://drupalsecrets.localhost:8000/admin/structure/content-as-config/menu-export'

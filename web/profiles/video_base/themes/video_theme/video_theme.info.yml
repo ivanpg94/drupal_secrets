@@ -1,0 +1,14 @@
+name: 'video theme'
+type: theme
+description: 'A custom theme for my Drupal installation profile.'
+package: video_theme
+core_version_requirement: ^9 || ^10 || ^11
+base theme: false
+
+libraries:
+  - video_theme/variables
+  - video_theme/general
+  - video_theme/menu
+  - video_theme/home
+  - video_theme/videos
+  - video_theme/video-detail

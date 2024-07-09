@@ -1,0 +1,35 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\views\ViewExecutable;
+
+/**
+ * Implements hook_form_alter() to capture search results.
+ */
+//function redirect_next_video_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+//  if ($form_id === 'views_exposed_form' && isset($form['#id']) && $form['#id'] === 'views-exposed-form-videos-page-1') {
+//    \Drupal::logger('redirect_next_video')->notice('Formulario alterado: @form_id', ['@form_id' => $form_id]);
+//
+//    // Añade un controlador de envío personalizado para capturar los resultados de búsqueda.
+//    $form['#submit'][] = 'redirect_next_video_search_api_views_exposed_form_submit';
+//  }
+//}
+
+function redirect_next_video_views_post_execute(ViewExecutable $view) {
+
+  if ($view->id() === 'videos') {
+
+  $nids = [];
+
+  foreach ($view->result as $result) {
+    // Asegúrate de que $result->_entity sea una entidad de nodo.
+    if ($result->_entity->getEntityTypeId() === 'node') {
+      $nids[] = $result->_entity->id();
+    }
+  }
+
+  \Drupal::service('session')->set('search_results_nids', $nids);
+
+  \Drupal::logger('video_theme')->info('Nids stored in session: @nids', ['@nids' => implode(', ', $nids)]);
+}
+}

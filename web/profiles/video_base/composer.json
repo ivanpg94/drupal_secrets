@@ -1,0 +1,46 @@
+{
+    "name": "wodby/video_base",
+    "description": "video",
+    "type": "drupal-profile",
+    "authors": [
+        {
+            "name": "wodby",
+            "email": "wodby@example.com"
+        }
+    ],
+    "config": {
+        "bin-dir": "bin",
+        "sort-packages": true,
+        "preferred-install": {
+            "drupal/core": "dist"
+        },
+        "allow-plugins": {
+            "composer/installers": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "cweagans/composer-patches": true,
+            "drupal/core-composer-scaffold": true,
+            "oomphinc/composer-installers-extender": true
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "require": {
+        "drupal/admin_toolbar": "^3.4",
+        "drupal/address": "^2.0",
+        "drupal/blockgroup": "^2.0",
+        "drupal/color": "^1.0",
+        "drupal/colorbox": "^2.0",
+        "drupal/config_split": "^2.0",
+        "drupal/content_as_config": "^1.0",
+        "drupal/devel": "^5.1",
+        "drupal/metatag": "^2.0",
+        "drupal/paragraphs": "^1.17",
+        "drupal/social_media_links": "^2.9",
+        "drupal/upgrade_status": "^4.0",
+        "drupal/views_infinite_scroll": "^2.0"
+    }
+}

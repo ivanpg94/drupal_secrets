@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: Tipo
+vid: tipo
+description: ''
+weight: 0

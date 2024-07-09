@@ -1,0 +1,29 @@
+uuid: 8ad1282d-c753-4b44-b46e-b0b408f001a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - video_theme
+_core:
+  default_config_hash: BEC3S7fHX9T3w3OcelXVbiRonLeUtGPmC0IZIalQ5JM
+id: video_theme_pagetitle
+theme: video_theme
+region: content
+weight: 1
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      video: video

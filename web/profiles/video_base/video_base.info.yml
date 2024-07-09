@@ -1,0 +1,94 @@
+name: video base
+type: profile
+description: 'Description of your profile.'
+core_version_requirement: ^9 || ^10 || ^11
+
+distribution:
+  name: video base
+  langcode: en
+  install:
+    theme: claro
+
+install:
+  - automated_cron
+  - breakpoint
+  - upgrade_status
+  - config_split
+  - devel
+  - environment_indicator
+  - environment_indicator_ui
+  - locale
+  - language
+  - colorbox
+  - editor_advanced_link
+  - node
+  - history
+  - block
+  - breakpoint
+  - ckeditor5
+  - config
+  - comment
+  - contextual
+  - contact
+  - menu_link_content
+  - datetime
+  - block_content
+  - editor
+  - help
+  - image
+  - menu_ui
+  - options
+  - path
+  - page_cache
+  - dynamic_page_cache
+  - big_pipe
+  - taxonomy
+  - dblog
+  - search
+  - shortcut
+  - toolbar
+  - field_ui
+  - file
+  - views
+  - views_ui
+  - automated_cron
+  - announcements_feed
+  - color
+  - field
+  - filter
+  - system
+  - update
+  - user
+  - link
+  - text
+  - admin_toolbar
+  - content_as_config
+  - paragraphs
+  - media_library
+  - layout_builder
+  - media
+  - content_translation
+  - workflows
+  - responsive_image
+  - social_media_links
+  - blockgroup
+  - metatag
+  - token
+  - views_infinite_scroll
+  - search_api
+  - search_api_db
+  - facets
+  - addtoany
+  - scheduler
+  - better_exposed_filters
+  - pathauto
+  - google_analytics
+
+  # custom
+  - redirect_next_video
+  - node_view_counter
+
+
+themes:
+  - video_theme
+  - claro

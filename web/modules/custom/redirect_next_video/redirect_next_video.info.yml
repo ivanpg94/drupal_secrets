@@ -1,0 +1,5 @@
+name: redirect next video
+type: module
+description: 'Provides functionality for redirect use to next video.'
+package: video_base
+core_version_requirement: ^9.5 || ^10 || ^11

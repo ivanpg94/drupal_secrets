@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_counter
+    - node.type.video
+  module:
+    - node_view_counter
+id: node.video.field_counter
+field_name: field_counter
+entity_type: node
+bundle: video
+label: counter
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: node_view_counter

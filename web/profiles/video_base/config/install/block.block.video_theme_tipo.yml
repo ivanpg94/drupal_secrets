@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.tipo
+  module:
+    - facets
+    - system
+  theme:
+    - video_theme
+id: video_theme_tipo
+theme: video_theme
+region: content
+weight: 0
+provider: null
+plugin: 'facet_block:tipo'
+settings:
+  id: 'facet_block:tipo'
+  label: Tipo
+  label_display: '0'
+  provider: facets
+  context_mapping: {  }
+  block_id: video_theme_tipo
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/videos\r\n/node\r\n<front>"

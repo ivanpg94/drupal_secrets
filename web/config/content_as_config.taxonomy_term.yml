@@ -1,0 +1,78 @@
+de7a45f6-0804-404f-9683-1204a01648ff:
+  uuid: de7a45f6-0804-404f-9683-1204a01648ff
+  tid: '1'
+  vid: tipo
+  name: Backend
+  langcode: en
+  description:
+    -
+      value: null
+      format: null
+  weight: '0'
+  parent:
+    -
+      target_id: '0'
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: 'Backend | Drupal secrets'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://drupalsecrets.localhost:8000/taxonomy/term/1'
+  path: /taxonomy/term/1
+edd9994b-96b3-4a0b-9881-dd15e8e5d52f:
+  uuid: edd9994b-96b3-4a0b-9881-dd15e8e5d52f
+  tid: '2'
+  vid: tipo
+  name: Frontend
+  langcode: en
+  description:
+    -
+      value: null
+      format: null
+  weight: '0'
+  parent:
+    -
+      target_id: '0'
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: 'Frontend | Drupal secrets'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://drupalsecrets.localhost:8000/taxonomy/term/2'
+  path: /taxonomy/term/2
+5f26559b-1331-45af-a6cb-9770c6f82ca2:
+  uuid: 5f26559b-1331-45af-a6cb-9770c6f82ca2
+  tid: '3'
+  vid: tipo
+  name: 'Site building'
+  langcode: en
+  description:
+    -
+      value: null
+      format: null
+  weight: '0'
+  parent:
+    -
+      target_id: '0'
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: 'Site building | Drupal secrets'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://drupalsecrets.localhost:8000/taxonomy/term/3'
+  path: /taxonomy/term/3

@@ -1,0 +1,77 @@
+@import "variables.pcss.css";
+
+.path-frontpage {
+  #block-video-theme-pagetitle-2 {
+    margin-top: 10%;
+    h1 {
+      text-align: center;
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 52px;
+      line-height: 63.39px;
+      color: var(--color-fourth);
+    }
+  }
+  #block-video-theme-tipo{
+    margin-top: 8rem;
+    .facets-widget-checkbox{
+      ul{
+        display: flex;
+        justify-content: space-between;
+        .facet-item{
+          position: relative;
+          width: 352px;
+          height: 414px;
+          background-color: var(--color-terciary);
+          box-shadow: 10px 5px 5px rgba(213, 213, 213, 0.25);
+          border-radius: 16px;
+          input:hover ~ .facet-item {
+            background-color: var(--color-secondary);
+          }
+          input{
+            z-index: 999;
+            position: absolute;
+            width: 352px;
+            height: 414px;
+            margin: 0;
+            cursor: pointer;
+            background: rgba(0,0,0,0);
+            color:black;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border: none;
+
+            }
+          }
+          label{
+            position: absolute;
+            width: 117px;
+            height: 117px;
+            margin: 0 auto;
+            background-image: url("../images/backend-icon.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            top: 20%;
+            left: 0;
+            right: 0;
+            span{
+              bottom: -60px;
+              position: absolute;
+              left: -50px;
+              right: -50px;
+              text-align: center;
+              font-family: var(--font-family);
+              font-weight: 700;
+              font-size: 24px;
+              color: var(--color-fourth);
+              line-height: 29.26px;
+              text-wrap: nowrap;
+            }
+          }
+        }
+      }
+    }
+  }
+
